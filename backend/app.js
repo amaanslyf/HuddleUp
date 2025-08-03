@@ -14,7 +14,7 @@ const server = createServer(app);
 const io = connectToSocket(server);
 
 app.set("port",(process.env.PORT || 8000));
-app.use(cors());
+app.use(cors({ origin: "https://huddle-up-lilac.vercel.app/" }));
 app.use(express.json({limit:"40kb"}));   //The limit option specifies the maximum size of the request body in bytes.
 app.use(express.urlencoded({limit:"40kb",extended:true}));  
 
