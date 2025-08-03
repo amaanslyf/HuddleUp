@@ -8,7 +8,7 @@ const socketToPeerMap = {};
 export const connectToSocket = (server) => {
     const io = new Server(server, {
         cors: { 
-            origin: "*", // Or your specific frontend URL like "http://localhost:5173"
+            origin: "https://huddle-up-lilac.vercel.app/", // Or your specific frontend URL like "http://localhost:5173"
             methods: ["GET", "POST"] 
         }
     });
